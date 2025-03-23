@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog - Ivelosi{% endblock %}
+
+{% block content %}
+
+<!-- Header Start -->
+<div class="container-fluid bg-breadcrumb">
+    <div class="container text-center py-5" style="max-width: 900px;">
+        <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Blog</h4>
+        <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+            <li class="breadcrumb-item active text-primary">Blog</li>
+        </ol>    
+    </div>
+</div>
+<!-- Header End -->
+
+<!-- Blog Start -->
+<div class="container-fluid blog pb-5">
+    <div class="container pb-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Our Blog & News</h4>
+            <h1 class="display-5 mb-4" id="about">Stay ahead with latest decentralised technology.</h1>
+            <p class="mb-0">because the internet is evolving, and you don’t want to be left behind.</p>
+        </div>
+        <div class="row">
+            {% for post in posts %}
+            <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="blog-item p-4">
+                    <div class="blog-img mb-4">
+                        {% if post.image_url %}
+                        <img src="{{ post.image_url }}" class="img-fluid w-100 rounded" alt="{{ post.title }}">
+                        {% else %}
+                        <img src="{{ url_for('static', filename='img/default-blog.jpg') }}" class="img-fluid w-100 rounded" alt="Default Blog Image">
+                        {% endif %}
+                        <div class="blog-title">
+                            <a href="#" class="btn">{{ post.category }}</a>
+                        </div>
+                    </div>
+                    <a href="{{ url_for('blog_post', filename=post.filepath) }}" class="h4 d-inline-block mb-3">{{ post.title }}</a>
+                    <p class="mb-4" id="para">{{ post.description | truncate(150) }}</p>
+                    <div class="d-flex align-items-center">
+                        <div class="ms-3">
+                            <h5>{{ post.author }}</h5>
+                            <p class="mb-0" id="para">{{ post.timestamp.strftime('%d %B, %Y') }}</p>
+                        </div>
+                    </div>
+                    <a href="{{ url_for('blog_post', filename=post.filepath) }}" class="btn btn-primary mt-3">Learn More</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Blog End -->
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Blog Post - Ivelosi{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center my-4">Create Blog Post</h1>
+    <form method="POST" class="mx-auto" style="max-width: 600px;">
+        <!-- Title Field -->
+        <div class="mb-3">
+            <label for="title" class="form-label">Title:</label>
+            <input type="text" id="title" name="title" class="form-control" required>
+        </div>
+
+        <!-- Content Field -->
+        <div class="mb-3">
+            <label for="content" class="form-label">Content:</label>
+            <textarea id="content" name="content" rows="10" class="form-control" required></textarea>
+        </div>
+
+        <!-- Author Field -->
+        <div class="mb-3">
+            <label for="author" class="form-label">Author:</label>
+            <input type="text" id="author" name="author" class="form-control" required>
+        </div>
+
+        <!-- Image URL Field -->
+        <div class="mb-3">
+            <label for="image_url" class="form-label">Image URL (optional):</label>
+            <input type="text" id="image_url" name="image_url" class="form-control">
+        </div>
+
+        <!-- Category Field -->
+        <div class="mb-3">
+            <label for="category" class="form-label">Category:</label>
+            <select id="category" name="category" class="form-select" required>
+                <option value="Web3.0">Web3.0</option>
+                <option value="Technology">Technology</option>
+                <option value="Decentralization">Decentralization</option>
+                <option value="AI">AI</option>
+                <option value="Blockchain">Blockchain</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <!-- Description Field -->
+        <div class="mb-3">
+            <label for="description" class="form-label">Description:</label>
+            <textarea id="description" name="description" rows="5" class="form-control" required></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Create Post</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

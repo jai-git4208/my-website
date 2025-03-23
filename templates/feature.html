@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block title %}Features - Ivelosi{% endblock %}
+{% block content %}
+            <!-- Header Start -->
+            <div class="container-fluid bg-breadcrumb">
+                <div class="container text-center py-5" style="max-width: 900px;">
+                    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Features</h4>
+                    <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item active text-primary">Feature</li>
+                    </ol>    
+                </div>
+            </div>
+            <!-- Header End -->
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+<!-- Features Start -->
+<div class="container-fluid feature pb-5">
+    <div class="container pb-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Our Features</h4>
+            <h1 class="display-5 mb-4" id="about">Connecting businesses, ideas, and people for greater impact.</h1>
+            <p class="mb-0">Ivelosi is not just another network. It’s the foundation of Web 3.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="feature-item p-4">
+                    <div class="feature-icon p-4 mb-4">
+                        <i class="fas fa-network-wired fa-4x text-primary"></i> <!-- Updated icon for ISP-Free Internet -->
+                    </div>
+                    <h4>True ISP-Free Internet</h4>
+                    <p class="mb-4" id="para">Connect directly without ISPs using peer-to-peer connectivity eliminating monthly fees as well.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="feature-item p-4">
+                    <div class="feature-icon p-4 mb-4">
+                        <i class="fas fa-route fa-4x text-primary"></i> <!-- Updated icon for Smart Routing -->
+                    </div>
+                    <h4>ML-Optimized Smart Routing</h4>
+                    <p class="mb-4" id="para">Our ML Algorithms ensure faster speeds and lower latency with zero congestion for secure and reliant communication.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="feature-item p-4">
+                    <div class="feature-icon p-4 mb-4">
+                        <i class="fas fa-shield-alt fa-4x text-primary"></i> <!-- Updated icon for Blockchain Security -->
+                    </div>
+                    <h4>Blockchain-Based Security</h4>
+                    <p class="mb-4" id="para">Every node is verified through blockchain, ensuring tamper-proof authentication and end-to-end encryption.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                <div class="feature-item p-4">
+                    <div class="feature-icon p-4 mb-4">
+                        <i class="fas fa-database fa-4x text-primary"></i> <!-- Updated icon for Decentralized Hosting -->
+                    </div>
+                    <h4>Decentralized Hosting & Storage</h4>
+                    <p class="mb-4" id="para">Host websites, dApps, and files without centralized servers, giving you full control over your data.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Features End -->
+        {% endblock %}
